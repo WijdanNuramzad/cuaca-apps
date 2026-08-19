@@ -1,0 +1,90 @@
+.hourly-section {
+  margin-top: 2rem;
+  animation: fadeInUp 0.6s ease 0.1s both;
+}
+
+.hourly-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.hourly-title svg {
+  color: var(--accent);
+}
+
+.hourly-container {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 1rem; /* Space for scrollbar */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--text-muted) transparent;
+}
+
+/* Webkit scrollbar for container */
+.hourly-container::-webkit-scrollbar {
+  height: 6px;
+}
+.hourly-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+.hourly-container::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+.hourly-container::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+.hourly-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  padding: 1rem 0.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0; /* Prevent shrinking in flex container */
+}
+
+.hourly-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.hourly-card--now {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.hourly-time {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.hourly-card--now .hourly-time {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.hourly-icon {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.hourly-temp {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
